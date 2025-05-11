@@ -1,0 +1,14 @@
+{
+    "name": "CORS Test Environment",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "forwardPorts": [443],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-azuretools.vscode-docker"
+    ],
+    "postCreateCommand": "service apache2 start",
+    "postStartCommand": "service apache2 restart"
+} 
